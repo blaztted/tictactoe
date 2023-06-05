@@ -1,19 +1,50 @@
 *, *::after, *::before{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 :root{
     --cell-size: 100px;
     --mark-size: calc(var(--cell-size) * .9);
+    --background-color: rgb(166, 250, 160);
+    --header-font-color: white;
+    --header-background-color: rgba(0, 0, 0, 0.349);
+    --border-color: white
 }
+    
+html {
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    min-height: 100%;
+  }
 
 body{
     margin: 0;
 }
 
+.header{
+    padding: 50px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--header-background-color);
+    color: var(--header-font-color);
+  }
+
+    
+
+
+.main{
+background-color: var(--background-color)
+}
+
 .board{
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -71,7 +102,7 @@ body{
 .board.x .cell:not(.x):not(.circle):hover::after,
 .board.circle .cell:not(.x):not(.circle):hover::before
  {
-    background-color: lightgrey;
+    background-color: rgb(247, 235, 235);
 }
 
 
